@@ -79,7 +79,6 @@ const saveMovie = (movie) => {
 }
 
 const updateMovie = (id, movie) => {
-  console.log(id, movie)
   const originalMovie = getMovie(id)
   let updatedFields = {}
   if (originalMovie.rating == 404)
