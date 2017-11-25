@@ -5,7 +5,7 @@ const { addMovie, listMovies, updateMovie, searchMovies } = require('./logic')
 const { toLower } = require('./utils')
 
 program
-  .version('0.0.1')
+  .version('0.0.3')
   .description('Watched movies tracking system')
 
 program
