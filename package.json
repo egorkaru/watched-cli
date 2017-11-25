@@ -1,0 +1,16 @@
+{
+  "name": "watched-cli",
+  "version": "1.0.0",
+  "description": "Track watched movies from cli",
+  "main": "watched.js",
+  "bin": {
+    "watched": "./watched.js"
+  },
+  "author": "Egor Rudinsky <egor@egor.tech>",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.12.1",
+    "inquirer": "^4.0.0",
+    "lowdb": "^1.0.0"
+  }
+}
