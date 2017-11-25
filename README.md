@@ -26,6 +26,6 @@ Usage: watched [options] [command]
     add|a [options] [title] [year] [rating]  Add a movie
     update|u [options] <id>                  Update a movie
     list|l                                   List all watched
-
+    search|s <search_phrase>                 Search in watched by title
 
 ```

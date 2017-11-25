@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const { addMovie, listMovies, updateMovie } = require('./logic')
+const { addMovie, listMovies, updateMovie, searchMovies } = require('./logic')
+const { toLower } = require('./utils')
 
 program
   .version('0.0.1')
@@ -34,7 +35,15 @@ program
   .description('List all watched')
   .action(() => listMovies())
 
-if (!process.argv.slice(2).length || !/[arudl]/.test(process.argv.slice(2))) {
+program
+  .command('search <search_phrase>')
+  .alias('s')
+  .description('Search in watched by title')
+  .action((search_phrase) => {
+    searchMovies(toLower(search_phrase))
+  })
+
+if (!process.argv.slice(2).length || !/[auls]/.test(process.argv.slice(2))) {
   program.outputHelp();
   process.exit();
 }
