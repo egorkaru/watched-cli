@@ -1,16 +1,33 @@
 {
   "name": "watched-cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Track watched movies from cli",
   "main": "watched.js",
   "bin": {
     "watched": "./watched.js"
   },
-  "author": "Egor Rudinsky <egor@egor.tech>",
-  "license": "Copyleft",
+  "author": "Egor Rudinsky <ilove@egor.tech>",
+  "license": "CC-BY-4.0",
   "dependencies": {
     "commander": "^2.12.1",
     "inquirer": "^4.0.0",
     "lowdb": "^1.0.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egorkaru/watched-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/egorkaru/watched-cli/issues"
+  },
+  "homepage": "https://github.com/egorkaru/watched-cli#readme",
+  "keywords": [
+    "tracking",
+    "cli",
+    "movies"
+  ]
 }
