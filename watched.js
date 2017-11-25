@@ -12,7 +12,7 @@ program
   .command('add [title] [year] [rating]')
   .alias('a')
   .description('Add a movie')
-  .option('-f, --force', 'force add only by name')  
+  .option('-f, --force', 'add only by title')  
   .action((title, year, rating, options) => {
     addMovie({title, year, rating}, options.force);
   })
