@@ -37,7 +37,7 @@ const addMovie = (movie, force = false) => {
   if (!movie.year)
     if (!force)
       emptyFields.push(questions.year)
-  if (!movie.rating && movie.rating !== 0)
+  if (!movie.rating && Number(movie.rating, 0) !== 0)
     if (!force) {
       emptyFields.push(questions.rating)
     } else {
@@ -102,8 +102,11 @@ const listMovies = () => {
 }
 
 const updateTopRated = () => {
-  const sorted = db.get('movies').sortBy('rating').value()
-  const rated = sorted.reverse().map((m, i) => ({index: i+1, id: m.id}))
+  const sortFn = (a, b) => Number(b.rating, 0) - Number(a.rating, 0)
+  const mapFn = (mov, ind) => ({index: ind+1, id: mov.id})
+  const allMovies = db.get('movies').value()
+  const sorted = allMovies.sort(sortFn)
+  const rated = sorted.map(mapFn)
   db.set('top_rated', [...rated])
     .write()
 }
