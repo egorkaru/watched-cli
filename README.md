@@ -1,9 +1,16 @@
 # watched - shitty way to track viewed movies from cli
 ---
 
+## Instalation
+```bash
+npm install -g watched-cli
+```
+
+## Usage 
+
 ```bash
 
-Usage:  [options] [command]
+Usage: watched [options] [command]
 
   Watched movies tracking system
 
@@ -19,5 +26,6 @@ Usage:  [options] [command]
     add|a [options] [title] [year] [rating]  Add a movie
     update|u [options] <id>                  Update a movie
     list|l                                   List all watched
+
 
 ```
